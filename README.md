@@ -50,6 +50,41 @@ Como ejemplo tenemos el área de Fiestas:
 Ingresar a la carpeta **“1_Modelo_Relacional”**, para ver el desarrollo completo del modelo Relacional.
 
 
+## Creación de los Scripts SQL📑
+La siguiente fase es implementar una base de datos (_Festividad de Copacabana_), creando las **tablas** en lenguaje SQL para el gestor de base de datos **Microsoft SQL Server** en función del **modelo Relacional**, visto en el apartado anterior.
+
+```sql
+-- creando la tabla PERSONA:
+
+CREATE TABLE PERSONA(
+
+	ci        int not null,
+	nombres   varchar(50),
+	paterno   varchar(50),
+	materno   varchar(50),
+	fecha_nac date,
+	sexo      varchar(50),
+  
+	CONSTRAINT ci_PK PRIMARY KEY(ci)
+)
+```
+
+Luego crear los **INSERT’s** con sus datos respectivos, para cada uno de las tablas creadas.
+
+```sql
+-- Tabla PERSONA:
+
+INSERT INTO PERSONA VALUES (8463792,'Ana','Carrasco','Carra','2001-12-01','Femenino');
+INSERT INTO PERSONA VALUES (8345267, 'Pablo', 'Gutierrez','Mesa','1988-02-09', 'Masculino');
+INSERT INTO PERSONA VALUES (4536279, 'Juan', 'Perez','Aviles', '1981-09-08', 'Masculino');
+```
+
+Ingresar a la carpeta **“2_Creacion_de_Tablas_y_llenado_SCRIPT”**, para ver los Scripts completos de _Tablas_ e _Inserts_.
+
+
+## Consultas SQL
+En esta fase se tienen algunos ejemplos de consultas SQL con el fin de verificar la implementación de la base de datos Relacional: Festividad de Copacabana; tales como:
+
 
 
 
