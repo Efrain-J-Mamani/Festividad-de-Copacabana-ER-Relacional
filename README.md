@@ -43,25 +43,11 @@ En esta fase se construyó el modelo Relacional a partir del modelo Entidad-Rela
 
 Como ejemplo tenemos el área de Fiestas:
 
+<p align="center">
+  <img src="./images/relacional.png" height="140" />
+</p>
 
-
-<font color="0D4CC0">Este texto está en azul</font>
-
-
-
-<FONT COLOR="red">Texto ROJO </FONT>
-
-- _**Fiestas**_
-
-PERSONA (ci, nombres, paterno, materno, fecha_nac, sexo)
-FESTIVIDAD (id_festividad, nombre, fecha_fest, lugar)
-LOCAL_FIESTA (id_local, nombre, direccion)
-CONJUNTO_MUSICAL (id_musical, nombre, tipo)
-Es_pasante (ci, id_festividad, id_local, id_musical, fecha_ini, fecha_fin)
-
-asd
-
-
+Ingresar a la carpeta **“1_Modelo_Relacional”**, para ver el desarrollo completo del modelo Relacional.
 
 
 
