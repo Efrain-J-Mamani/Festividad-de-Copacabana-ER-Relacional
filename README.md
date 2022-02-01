@@ -31,7 +31,7 @@ En primera instancia se diseñó el modelo Entidad-Relación a lápiz y papel, p
   <img src="./images/er.png" height="300" />
 </p>
 
-Ingresar a la carpeta **"0_Modelo_ER"**, para ver el diseño completo del modelo Entidad-Relación.
+- [x] Ingresar a la carpeta **"0_Modelo_ER"**, para ver el diseño completo del modelo Entidad-Relación.
 
 
 ## Modelo Relacional
@@ -47,7 +47,7 @@ Como ejemplo tenemos el área de Fiestas:
   <img src="./images/relacional.png" height="140" />
 </p>
 
-Ingresar a la carpeta **“1_Modelo_Relacional”**, para ver el desarrollo completo del modelo Relacional.
+- [x] Ingresar a la carpeta **“1_Modelo_Relacional”**, para ver el desarrollo completo del modelo Relacional.
 
 
 ## Creación de los Scripts SQL📑
@@ -79,15 +79,45 @@ INSERT INTO PERSONA VALUES (8345267, 'Pablo', 'Gutierrez','Mesa','1988-02-09', '
 INSERT INTO PERSONA VALUES (4536279, 'Juan', 'Perez','Aviles', '1981-09-08', 'Masculino');
 ```
 
-Ingresar a la carpeta **“2_Creacion_de_Tablas_y_llenado_SCRIPT”**, para ver los Scripts completos de _Tablas_ e _Inserts_.
+- [x] Ingresar a la carpeta **“2_Creacion_de_Tablas_y_llenado_SCRIPT”**, para ver los Scripts completos de _Tablas_ e _Inserts_.
 
 
 ## Consultas SQL
 En esta fase se tienen algunos ejemplos de consultas SQL con el fin de verificar la implementación de la base de datos Relacional: Festividad de Copacabana; tales como:
 
+1. **Desplegar el tiempo de duración de estas festividades.**
+
+***Código:***
+
+```sql
+SELECT distinct id_festividad, dbo.obt_nombre_festividad(id_festividad) Festividad,
+DAY(fecha_fin) - DAY(fecha_ini) + 1 Duracion_dias
+FROM es_pasante
+```
+
+**_Captura:_**
+
+<p align="center">
+  <img src="./images/consulta_1.png" />
+</p>
 
 
+2. **¿Quiénes son los encargados de ofrecer estas diversiones?**
 
+***Código:***
 
+```sql
+SELECT d.nombre Diversion, dbo.obt_nombre_persona(e.ci_encargado) Encargado_de_diversion
+FROM encargado e, diversion d
+WHERE e.id_diversion = d.id_diversion
+```
+
+***Captura:***
+
+<p align="center">
+  <img src="./images/consulta_2.png" />
+</p>
+
+- [x] Para ver más ejemplos ingresar a la carpeta **“3_Consultas_SQL”**.
 
 
